@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: xepa-solidaria-api
+  datasource:
+    url: jdbc:h2:mem:xepa;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+  flyway:
+    locations: classpath:db/migration
+  jackson:
+    default-property-inclusion: non_null
+    time-zone: UTC
+
+server:
+  port: ${PORT:8080}
+  shutdown: graceful
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+
+xepa:
+  jwt:
+    segredo: ${JWT_SECRET:chave-local-de-desenvolvimento-xepa-solidaria-2026}
+    validade: PT12H
+  cors:
+    origens: ${CORS_ORIGINS:http://localhost:5173}
+  expiracao:
+    intervalo: PT1M
