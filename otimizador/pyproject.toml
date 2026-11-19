@@ -1,0 +1,9 @@
+[project]
+name = "xepa-otimizador"
+version = "1.0.0"
+description = "Planejamento de coleta da Xepa Solidária com programação dinâmica"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

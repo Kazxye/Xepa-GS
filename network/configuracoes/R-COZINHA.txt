@@ -1,0 +1,29 @@
+enable
+configure terminal
+hostname R-COZINHA
+no ip domain-lookup
+banner motd #Xepa Solidaria - acesso restrito#
+interface GigabitEthernet0/0
+ description LAN da cozinha comunitaria
+ ip address 192.168.20.1 255.255.255.0
+ no shutdown
+ exit
+interface GigabitEthernet0/1
+ description Link para R-INTERNET
+ ip address 10.0.0.6 255.255.255.252
+ no shutdown
+ exit
+ip dhcp excluded-address 192.168.20.1 192.168.20.99
+ip dhcp pool COZINHA
+ network 192.168.20.0 255.255.255.0
+ default-router 192.168.20.1
+ dns-server 10.0.30.53
+ exit
+router ospf 1
+ router-id 3.3.3.3
+ passive-interface GigabitEthernet0/0
+ network 192.168.20.0 0.0.0.255 area 0
+ network 10.0.0.4 0.0.0.3 area 0
+ exit
+end
+write memory

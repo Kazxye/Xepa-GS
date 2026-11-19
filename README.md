@@ -44,7 +44,12 @@ npm install
 npm run dev
 ```
 
-O passo a passo de publicação está em [DEPLOY.md](DEPLOY.md).
+Otimizador (requer Python 3.12 ou superior):
+
+```bash
+cd otimizador
+python -m xepa_otimizador dados/ofertas.json
+```
 
 ## Equipe
 

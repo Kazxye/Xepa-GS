@@ -1,0 +1,50 @@
+{
+  "referencia": "2026-11-16T12:30:00-03:00",
+  "capacidadeKg": 10,
+  "ofertas": [
+    {
+      "id": 201,
+      "tipo": "VERDURA",
+      "descricao": "Couve",
+      "quantidadeKg": 2.0,
+      "horarioLimite": "2026-11-16T13:00:00-03:00",
+      "feira": {
+        "id": 1,
+        "nome": "Feira da Rua Joaquim Távora"
+      }
+    },
+    {
+      "id": 202,
+      "tipo": "FRUTA",
+      "descricao": "Banana",
+      "quantidadeKg": 3.0,
+      "horarioLimite": "2026-11-16T14:00:00-03:00",
+      "feira": {
+        "id": 1,
+        "nome": "Feira da Rua Joaquim Távora"
+      }
+    },
+    {
+      "id": 203,
+      "tipo": "LEGUME",
+      "descricao": "Cenoura",
+      "quantidadeKg": 4.0,
+      "horarioLimite": "2026-11-16T18:00:00-03:00",
+      "feira": {
+        "id": 2,
+        "nome": "Feira da Rua Doutor Mário Cardim"
+      }
+    },
+    {
+      "id": 204,
+      "tipo": "FRUTA",
+      "descricao": "Mamão",
+      "quantidadeKg": 5.0,
+      "horarioLimite": "2026-11-16T13:30:00-03:00",
+      "feira": {
+        "id": 2,
+        "nome": "Feira da Rua Doutor Mário Cardim"
+      }
+    }
+  ]
+}

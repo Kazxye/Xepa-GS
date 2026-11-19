@@ -1,0 +1,29 @@
+enable
+configure terminal
+hostname R-FEIRA
+no ip domain-lookup
+banner motd #Xepa Solidaria - acesso restrito#
+interface GigabitEthernet0/0
+ description LAN da feira
+ ip address 192.168.10.1 255.255.255.0
+ no shutdown
+ exit
+interface GigabitEthernet0/1
+ description Link para R-INTERNET
+ ip address 10.0.0.2 255.255.255.252
+ no shutdown
+ exit
+ip dhcp excluded-address 192.168.10.1 192.168.10.99
+ip dhcp pool FEIRA
+ network 192.168.10.0 255.255.255.0
+ default-router 192.168.10.1
+ dns-server 10.0.30.53
+ exit
+router ospf 1
+ router-id 2.2.2.2
+ passive-interface GigabitEthernet0/0
+ network 192.168.10.0 0.0.0.255 area 0
+ network 10.0.0.0 0.0.0.3 area 0
+ exit
+end
+write memory

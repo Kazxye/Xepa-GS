@@ -1,0 +1,28 @@
+enable
+configure terminal
+hostname R-INTERNET
+no ip domain-lookup
+banner motd #Xepa Solidaria - acesso restrito#
+interface GigabitEthernet0/0
+ description Link para R-FEIRA
+ ip address 10.0.0.1 255.255.255.252
+ no shutdown
+ exit
+interface GigabitEthernet0/1
+ description Link para R-NUVEM
+ ip address 10.0.0.9 255.255.255.252
+ no shutdown
+ exit
+interface GigabitEthernet0/2
+ description Link para R-COZINHA
+ ip address 10.0.0.5 255.255.255.252
+ no shutdown
+ exit
+router ospf 1
+ router-id 1.1.1.1
+ network 10.0.0.0 0.0.0.3 area 0
+ network 10.0.0.4 0.0.0.3 area 0
+ network 10.0.0.8 0.0.0.3 area 0
+ exit
+end
+write memory

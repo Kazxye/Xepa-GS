@@ -1,0 +1,116 @@
+{
+  "referencia": "2026-11-16T12:30:00-03:00",
+  "capacidadeKg": 60,
+  "ofertas": [
+    {
+      "id": 101,
+      "tipo": "VERDURA",
+      "descricao": "Alface crespa e couve",
+      "quantidadeKg": 12.0,
+      "horarioLimite": "2026-11-16T13:00:00-03:00",
+      "feira": {
+        "id": 1,
+        "nome": "Feira da Rua Joaquim Távora"
+      }
+    },
+    {
+      "id": 102,
+      "tipo": "FRUTA",
+      "descricao": "Banana nanica madura",
+      "quantidadeKg": 24.0,
+      "horarioLimite": "2026-11-16T14:00:00-03:00",
+      "feira": {
+        "id": 1,
+        "nome": "Feira da Rua Joaquim Távora"
+      }
+    },
+    {
+      "id": 103,
+      "tipo": "LEGUME",
+      "descricao": "Batata, cenoura e chuchu",
+      "quantidadeKg": 40.0,
+      "horarioLimite": "2026-11-16T18:00:00-03:00",
+      "feira": {
+        "id": 2,
+        "nome": "Feira da Rua Doutor Mário Cardim"
+      }
+    },
+    {
+      "id": 104,
+      "tipo": "FRUTA",
+      "descricao": "Mamão formosa",
+      "quantidadeKg": 18.5,
+      "horarioLimite": "2026-11-16T13:30:00-03:00",
+      "feira": {
+        "id": 2,
+        "nome": "Feira da Rua Doutor Mário Cardim"
+      }
+    },
+    {
+      "id": 105,
+      "tipo": "VERDURA",
+      "descricao": "Rúcula e cheiro-verde",
+      "quantidadeKg": 6.5,
+      "horarioLimite": "2026-11-16T15:00:00-03:00",
+      "feira": {
+        "id": 3,
+        "nome": "Feira da Rua Capitão Macedo"
+      }
+    },
+    {
+      "id": 106,
+      "tipo": "LEGUME",
+      "descricao": "Tomate italiano",
+      "quantidadeKg": 30.0,
+      "horarioLimite": "2026-11-16T14:30:00-03:00",
+      "feira": {
+        "id": 3,
+        "nome": "Feira da Rua Capitão Macedo"
+      }
+    },
+    {
+      "id": 107,
+      "tipo": "FRUTA",
+      "descricao": "Laranja pera",
+      "quantidadeKg": 35.0,
+      "horarioLimite": "2026-11-16T20:00:00-03:00",
+      "feira": {
+        "id": 4,
+        "nome": "Feira da Rua Humberto I"
+      }
+    },
+    {
+      "id": 108,
+      "tipo": "LEGUME",
+      "descricao": "Abóbora japonesa",
+      "quantidadeKg": 65.0,
+      "horarioLimite": "2026-11-16T17:00:00-03:00",
+      "feira": {
+        "id": 4,
+        "nome": "Feira da Rua Humberto I"
+      }
+    },
+    {
+      "id": 109,
+      "tipo": "LEGUME",
+      "descricao": "Pimentão e cebola",
+      "quantidadeKg": 16.0,
+      "horarioLimite": "2026-11-16T12:00:00-03:00",
+      "feira": {
+        "id": 5,
+        "nome": "Feira da Rua Áurea"
+      }
+    },
+    {
+      "id": 110,
+      "tipo": "FRUTA",
+      "descricao": "Melancia e melão",
+      "quantidadeKg": 28.0,
+      "horarioLimite": "2026-11-16T13:15:00-03:00",
+      "feira": {
+        "id": 5,
+        "nome": "Feira da Rua Áurea"
+      }
+    }
+  ]
+}
