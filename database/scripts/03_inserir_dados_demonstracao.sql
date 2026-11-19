@@ -1,0 +1,60 @@
+INSERT INTO usuario (id, email, senha_hash, perfil, criado_em) VALUES
+    (1, 'joana@demo.xepa.app', '$2a$10$x.hf8ps18P/nsfkEnXcZQO7ELcDzZyAxwFmsvtiLZT0hyC4R/MyHq', 'FEIRANTE', TIMESTAMP WITH TIME ZONE '2026-11-01 09:00:00-03:00'),
+    (2, 'seu.antonio@demo.xepa.app', '$2a$10$x.hf8ps18P/nsfkEnXcZQO7ELcDzZyAxwFmsvtiLZT0hyC4R/MyHq', 'FEIRANTE', TIMESTAMP WITH TIME ZONE '2026-11-01 09:05:00-03:00'),
+    (3, 'kenji@demo.xepa.app', '$2a$10$x.hf8ps18P/nsfkEnXcZQO7ELcDzZyAxwFmsvtiLZT0hyC4R/MyHq', 'FEIRANTE', TIMESTAMP WITH TIME ZONE '2026-11-01 09:10:00-03:00'),
+    (4, 'marlene@demo.xepa.app', '$2a$10$x.hf8ps18P/nsfkEnXcZQO7ELcDzZyAxwFmsvtiLZT0hyC4R/MyHq', 'FEIRANTE', TIMESTAMP WITH TIME ZONE '2026-11-01 09:15:00-03:00'),
+    (5, 'raimundo@demo.xepa.app', '$2a$10$x.hf8ps18P/nsfkEnXcZQO7ELcDzZyAxwFmsvtiLZT0hyC4R/MyHq', 'FEIRANTE', TIMESTAMP WITH TIME ZONE '2026-11-01 09:20:00-03:00'),
+    (6, 'cozinha.esperanca@demo.xepa.app', '$2a$10$x.hf8ps18P/nsfkEnXcZQO7ELcDzZyAxwFmsvtiLZT0hyC4R/MyHq', 'COZINHA', TIMESTAMP WITH TIME ZONE '2026-11-01 10:00:00-03:00'),
+    (7, 'panela.cheia@demo.xepa.app', '$2a$10$x.hf8ps18P/nsfkEnXcZQO7ELcDzZyAxwFmsvtiLZT0hyC4R/MyHq', 'COZINHA', TIMESTAMP WITH TIME ZONE '2026-11-01 10:05:00-03:00'),
+    (8, 'mesa.vizinhanca@demo.xepa.app', '$2a$10$x.hf8ps18P/nsfkEnXcZQO7ELcDzZyAxwFmsvtiLZT0hyC4R/MyHq', 'COZINHA', TIMESTAMP WITH TIME ZONE '2026-11-01 10:10:00-03:00');
+
+INSERT INTO feirante (id, usuario_id, feira_id, nome, telefone, nome_barraca) VALUES
+    (1, 1, 1, 'Joana Ribeiro', '11987650001', 'Frutas da Joana'),
+    (2, 2, 2, 'Antônio Carvalho', '11987650002', 'Hortifrúti Seu Antônio'),
+    (3, 3, 3, 'Kenji Tanaka', '11987650003', 'Verduras Tanaka'),
+    (4, 4, 4, 'Marlene Souza', '11987650004', 'Legumes da Marlene'),
+    (5, 5, 5, 'Raimundo Alves', '11987650005', 'Banca do Raimundo');
+
+INSERT INTO cozinha (id, usuario_id, nome, responsavel, telefone, endereco, latitude, longitude, raio_busca_km, capacidade_carga_kg) VALUES
+    (1, 6, 'Cozinha Comunitária Esperança', 'Maria das Graças', '11976540001', 'Rua Santa Cruz, Vila Mariana, São Paulo', -23.5890, -46.6365, 2.0, 60.00),
+    (2, 7, 'Projeto Panela Cheia', 'Cláudia Mendes', '11976540002', 'Rua Domingos de Morais, Vila Mariana, São Paulo', -23.5862, -46.6380, 1.5, 40.00),
+    (3, 8, 'Mesa da Vizinhança', 'Paulo Henrique', '11976540003', 'Rua Afonso Celso, Vila Mariana, São Paulo', -23.5938, -46.6355, 2.5, 80.00);
+
+INSERT INTO oferta (id, feirante_id, tipo, descricao, quantidade_kg, horario_limite, foto_url, status, criada_em, versao) VALUES
+    (1, 1, 'FRUTA', 'Banana nanica madura, 2 caixas', 24.00, TIMESTAMP WITH TIME ZONE '2026-11-03 13:30:00-03:00', NULL, 'RETIRADA', TIMESTAMP WITH TIME ZONE '2026-11-03 11:20:00-03:00', 3),
+    (2, 1, 'FRUTA', 'Mamão formosa com casca marcada', 18.50, TIMESTAMP WITH TIME ZONE '2026-11-10 13:30:00-03:00', NULL, 'RETIRADA', TIMESTAMP WITH TIME ZONE '2026-11-10 11:35:00-03:00', 3),
+    (3, 2, 'LEGUME', 'Tomate italiano maduro', 30.00, TIMESTAMP WITH TIME ZONE '2026-11-04 13:00:00-03:00', NULL, 'RETIRADA', TIMESTAMP WITH TIME ZONE '2026-11-04 11:10:00-03:00', 3),
+    (4, 2, 'VERDURA', 'Alface crespa e couve', 12.00, TIMESTAMP WITH TIME ZONE '2026-11-11 13:00:00-03:00', NULL, 'EXPIRADA', TIMESTAMP WITH TIME ZONE '2026-11-11 11:40:00-03:00', 1),
+    (5, 3, 'VERDURA', 'Couve, rúcula e cheiro-verde', 15.00, TIMESTAMP WITH TIME ZONE '2026-11-05 13:30:00-03:00', NULL, 'RETIRADA', TIMESTAMP WITH TIME ZONE '2026-11-05 11:25:00-03:00', 3),
+    (6, 3, 'LEGUME', 'Abobrinha e berinjela', 22.00, TIMESTAMP WITH TIME ZONE '2026-11-12 13:30:00-03:00', NULL, 'RETIRADA', TIMESTAMP WITH TIME ZONE '2026-11-12 11:15:00-03:00', 3),
+    (7, 4, 'LEGUME', 'Batata, cenoura e chuchu', 40.00, TIMESTAMP WITH TIME ZONE '2026-11-06 13:00:00-03:00', NULL, 'RETIRADA', TIMESTAMP WITH TIME ZONE '2026-11-06 11:05:00-03:00', 3),
+    (8, 4, 'LEGUME', 'Pimentão e cebola', 16.00, TIMESTAMP WITH TIME ZONE '2026-11-13 13:00:00-03:00', NULL, 'EXPIRADA', TIMESTAMP WITH TIME ZONE '2026-11-13 11:50:00-03:00', 1),
+    (9, 5, 'FRUTA', 'Laranja pera e tangerina', 35.00, TIMESTAMP WITH TIME ZONE '2026-11-07 13:30:00-03:00', NULL, 'RETIRADA', TIMESTAMP WITH TIME ZONE '2026-11-07 11:30:00-03:00', 3),
+    (10, 5, 'FRUTA', 'Melancia e melão', 28.00, TIMESTAMP WITH TIME ZONE '2026-11-08 13:30:00-03:00', NULL, 'RETIRADA', TIMESTAMP WITH TIME ZONE '2026-11-08 11:45:00-03:00', 3);
+
+INSERT INTO reserva (id, oferta_id, cozinha_id, reservada_em) VALUES
+    (1, 1, 1, TIMESTAMP WITH TIME ZONE '2026-11-03 11:32:00-03:00'),
+    (2, 2, 2, TIMESTAMP WITH TIME ZONE '2026-11-10 11:44:00-03:00'),
+    (3, 3, 2, TIMESTAMP WITH TIME ZONE '2026-11-04 11:18:00-03:00'),
+    (4, 5, 1, TIMESTAMP WITH TIME ZONE '2026-11-05 11:41:00-03:00'),
+    (5, 6, 1, TIMESTAMP WITH TIME ZONE '2026-11-12 11:29:00-03:00'),
+    (6, 7, 3, TIMESTAMP WITH TIME ZONE '2026-11-06 11:12:00-03:00'),
+    (7, 9, 3, TIMESTAMP WITH TIME ZONE '2026-11-07 11:52:00-03:00'),
+    (8, 10, 3, TIMESTAMP WITH TIME ZONE '2026-11-08 11:58:00-03:00');
+
+INSERT INTO retirada (id, reserva_id, peso_kg, confirmado_feirante_em, confirmado_cozinha_em, concluida_em) VALUES
+    (1, 1, 23.50, TIMESTAMP WITH TIME ZONE '2026-11-03 12:40:00-03:00', TIMESTAMP WITH TIME ZONE '2026-11-03 12:42:00-03:00', TIMESTAMP WITH TIME ZONE '2026-11-03 12:42:00-03:00'),
+    (2, 2, 18.00, TIMESTAMP WITH TIME ZONE '2026-11-10 12:55:00-03:00', TIMESTAMP WITH TIME ZONE '2026-11-10 12:56:00-03:00', TIMESTAMP WITH TIME ZONE '2026-11-10 12:56:00-03:00'),
+    (3, 3, 29.00, TIMESTAMP WITH TIME ZONE '2026-11-04 12:20:00-03:00', TIMESTAMP WITH TIME ZONE '2026-11-04 12:21:00-03:00', TIMESTAMP WITH TIME ZONE '2026-11-04 12:21:00-03:00'),
+    (4, 4, 14.20, TIMESTAMP WITH TIME ZONE '2026-11-05 12:35:00-03:00', TIMESTAMP WITH TIME ZONE '2026-11-05 12:35:00-03:00', TIMESTAMP WITH TIME ZONE '2026-11-05 12:35:00-03:00'),
+    (5, 5, 21.00, TIMESTAMP WITH TIME ZONE '2026-11-12 12:30:00-03:00', TIMESTAMP WITH TIME ZONE '2026-11-12 12:33:00-03:00', TIMESTAMP WITH TIME ZONE '2026-11-12 12:33:00-03:00'),
+    (6, 6, 38.50, TIMESTAMP WITH TIME ZONE '2026-11-06 12:10:00-03:00', TIMESTAMP WITH TIME ZONE '2026-11-06 12:12:00-03:00', TIMESTAMP WITH TIME ZONE '2026-11-06 12:12:00-03:00'),
+    (7, 7, 34.00, TIMESTAMP WITH TIME ZONE '2026-11-07 12:45:00-03:00', TIMESTAMP WITH TIME ZONE '2026-11-07 12:47:00-03:00', TIMESTAMP WITH TIME ZONE '2026-11-07 12:47:00-03:00'),
+    (8, 8, 27.00, TIMESTAMP WITH TIME ZONE '2026-11-08 12:50:00-03:00', TIMESTAMP WITH TIME ZONE '2026-11-08 12:52:00-03:00', TIMESTAMP WITH TIME ZONE '2026-11-08 12:52:00-03:00');
+
+ALTER TABLE usuario ALTER COLUMN id RESTART WITH 100;
+ALTER TABLE feirante ALTER COLUMN id RESTART WITH 100;
+ALTER TABLE cozinha ALTER COLUMN id RESTART WITH 100;
+ALTER TABLE oferta ALTER COLUMN id RESTART WITH 100;
+ALTER TABLE reserva ALTER COLUMN id RESTART WITH 100;
+ALTER TABLE retirada ALTER COLUMN id RESTART WITH 100;
