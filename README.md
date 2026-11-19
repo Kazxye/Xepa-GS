@@ -12,6 +12,7 @@ No fim de cada feira sobra comida boa que o feirante não consegue vender nem le
 | Database Design | [`database/`](database) |
 | Dynamic Programming | [`otimizador/`](otimizador) |
 | Network Architect Solutions | [`network/`](network) |
+| Data Science and Statistical Computing | [`data-science/`](data-science) |
 | Agile Methodology with Squad Framework | [`agile/`](agile) |
 
 O aplicativo web fica em [`web/`](web) e é a base comum de todas as entregas.
@@ -25,6 +26,7 @@ O aplicativo web fica em [`web/`](web) e é a base comum de todas as entregas.
 | `database/` | Modelo do banco, dicionário de dados e scripts SQL |
 | `otimizador/` | Programação dinâmica em Python para planejar a coleta |
 | `network/` | Topologia de rede no Cisco Packet Tracer |
+| `data-science/` | Análise estatística do desafio O custo invisível do café |
 | `agile/` | Organização da squad, backlog e sprints |
 
 ## Como rodar localmente
