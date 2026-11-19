@@ -4,6 +4,8 @@ Sobras de feira livre para cozinhas comunitárias do mesmo bairro. Global Soluti
 
 No fim de cada feira sobra comida boa que o feirante não consegue vender nem levar de volta. A poucas quadras, cozinhas comunitárias dependem de doações que chegam sem previsão. Na Xepa Solidária o feirante avisa o que sobrou e até que horas pode ser retirado, uma cozinha próxima reserva e vai buscar, e cada retirada confirmada soma no total de quilos que deixaram de ir para o lixo.
 
+A visão geral do projeto, com o problema, a solução e como ela foi construída, está em [`visao-geral.pdf`](visao-geral.pdf).
+
 ## Entregas por disciplina
 
 | Disciplina | Pasta |
